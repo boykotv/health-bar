@@ -211,6 +211,9 @@ MonoBehaviour:
   lerpSpeed: 2
   content: {fileID: 1022493203}
   valueText: {fileID: 856859911}
+  fullColor: {r: 0, g: 0, b: 0, a: 0}
+  lowColor: {r: 0, g: 0, b: 0, a: 0}
+  lerpColors: 0
 --- !u!1 &496294062
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,6 +506,9 @@ MonoBehaviour:
   lerpSpeed: 2
   content: {fileID: 1777346933}
   valueText: {fileID: 713181700}
+  fullColor: {r: 0.18039216, g: 0.6313726, b: 0.31764707, a: 1}
+  lowColor: {r: 0.9811321, g: 0, b: 0.06266627, a: 0}
+  lerpColors: 1
 --- !u!114 &704408522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -880,6 +886,9 @@ MonoBehaviour:
   lerpSpeed: 2
   content: {fileID: 1389992634}
   valueText: {fileID: 1883891806}
+  fullColor: {r: 0, g: 0, b: 0, a: 0}
+  lowColor: {r: 0, g: 0, b: 0, a: 0}
+  lerpColors: 0
 --- !u!114 &879812603
 MonoBehaviour:
   m_ObjectHideFlags: 0

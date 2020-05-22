@@ -16,6 +16,15 @@ public class BarScript : MonoBehaviour
     [SerializeField]
     private Text valueText;
 
+    [SerializeField]
+    private Color fullColor;
+
+    [SerializeField]
+    private Color lowColor;
+
+    [SerializeField]
+    private bool lerpColors;
+
     public float MaxValue { get; set; }
 
     public float Value
@@ -31,7 +40,10 @@ public class BarScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (lerpColors)
+        {
+            content.color = fullColor;
+        }
     }
 
     // Update is called once per frame
@@ -45,6 +57,11 @@ public class BarScript : MonoBehaviour
         if (fillAmount != content.fillAmount)
         {
             content.fillAmount = Mathf.Lerp(content.fillAmount, fillAmount, Time.deltaTime * lerpSpeed);
+        }
+
+        if (lerpColors)
+        {
+            content.color = Color.Lerp(lowColor, fullColor, fillAmount);
         }
     }
 
