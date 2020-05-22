@@ -11,6 +11,16 @@ public class BarScript : MonoBehaviour
     [SerializeField]
     private Image content;
 
+    public float MaxValue { get; set; }
+
+    public float Value
+    {
+        set
+        {
+            fillAmount = Map(value, 0, MaxValue, 0, 1);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +35,10 @@ public class BarScript : MonoBehaviour
 
     private void HandleBar()
     {
-        content.fillAmount = Map(78, 0, 230, 0, 1);
+        if (fillAmount != content.fillAmount)
+        {
+            content.fillAmount = fillAmount;
+        }
     }
 
     private float Map(float value, float inMin, float inMax, float outMin, float outMax)
